@@ -78,14 +78,8 @@
   <script src="flutter_bootstrap.js" async></script>
   <script>
     if ('serviceWorker' in navigator) {
-      // Get the base path from the current location
-      // This will correctly handle subdirectories like /matematica-visual-web/
-      const basePath = document.querySelector('base')?.getAttribute('href') || '/';
-      const swPath = basePath + 'firebase-messaging-sw.js';
-
-      console.log('Registering service worker at:', swPath);
-
-      navigator.serviceWorker.register(swPath)
+      // Register with a simple relative path - the browser will resolve it correctly
+      navigator.serviceWorker.register('firebase-messaging-sw.js')
         .then((registration) => {
           console.log('Service Worker registered:', registration);
         })
