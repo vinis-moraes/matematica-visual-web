@@ -81,7 +81,7 @@
       window.addEventListener('load', function () {
         // Construct absolute URL using the document's baseURI (which respects <base href>)
         // This ensures we get the correct path like .../matematica-visual-web/firebase-messaging-sw.js
-        const swUrl = new URL('/matematica-visual-app/firebase-messaging-sw.js', document.baseURI).href;
+        const swUrl = new URL('/matematica-visual-web/firebase-messaging-sw.js', document.baseURI).href;
 
         console.log('Attempting to register Service Worker at:', swUrl);
 
