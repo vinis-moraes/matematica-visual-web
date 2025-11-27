@@ -1,11 +1,11 @@
 {
-    "name": "matematica_visual_flutter",
-    "short_name": "matematica_visual_flutter",
+    "name": "Matemática Visual",
+    "short_name": "Mat Visual",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#8B5CF6",
+    "theme_color": "#8B5CF6",
+    "description": "Aprenda matemática de forma visual e interativa",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
