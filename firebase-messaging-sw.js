@@ -1,4 +1,5 @@
 // Firebase Messaging Service Worker for Web Push Notifications
+// Version: 2.0 - Rich notifications with module names
 importScripts('https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js');
 importScripts('https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging-compat.js');
 
