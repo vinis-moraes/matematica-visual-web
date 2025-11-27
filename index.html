@@ -54,7 +54,7 @@
     <base href="/matematica-visual-web/">
 
     <meta charset="UTF-8">
-    <meta content="IE=Edge" http-equiv="X-X-UA-Compatible">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <meta name="description" content="A new Flutter project.">
 
     <!-- iOS meta tags & icons -->
@@ -78,11 +78,14 @@
   <script src="flutter_bootstrap.js" async></script>
   <script>
     if ('serviceWorker' in navigator) {
-      // Use relative path so it works with base href
-      const baseUrl = document.querySelector('base')?.href || window.location.origin + '/';
-      const swUrl = new URL('./firebase-messaging-sw.js', baseUrl).href;
+      // Get the base path from the current location
+      // This will correctly handle subdirectories like /matematica-visual-web/
+      const basePath = document.querySelector('base')?.getAttribute('href') || '/';
+      const swPath = basePath + 'firebase-messaging-sw.js';
 
-      navigator.serviceWorker.register(swUrl)
+      console.log('Registering service worker at:', swPath);
+
+      navigator.serviceWorker.register(swPath)
         .then((registration) => {
           console.log('Service Worker registered:', registration);
         })
